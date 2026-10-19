@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B0C4DE"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="26dp"
+            android:gravity="center"
+            android:text="Dodaj pracownika"
+            android:textColor="#20344B"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tlo_grupy"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Dane pracownika"
+                android:textColor="#20344B"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="105dp"
+                    android:layout_height="wrap_content"
+                    android:text="Imię"
+                    android:textColor="#24374C"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/imie"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tlo_pola"
+                    android:inputType="textPersonName|textCapWords"
+                    android:paddingHorizontal="10dp"
+                    android:singleLine="true"
+                    android:textColor="#202020"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="105dp"
+                    android:layout_height="wrap_content"
+                    android:text="Nazwisko"
+                    android:textColor="#24374C"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/nazwisko"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tlo_pola"
+                    android:inputType="textPersonName|textCapWords"
+                    android:paddingHorizontal="10dp"
+                    android:singleLine="true"
+                    android:textColor="#202020"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="105dp"
+                    android:layout_height="wrap_content"
+                    android:text="Stanowisko"
+                    android:textColor="#24374C"
+                    android:textSize="15sp" />
+
+                <Spinner
+                    android:id="@+id/stanowisko"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tlo_pola"
+                    android:entries="@array/stanowiska"
+                    android:paddingHorizontal="8dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/tlo_grupy"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Generowanie hasła"
+                android:textColor="#20344B"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="105dp"
+                    android:layout_height="wrap_content"
+                    android:text="Ile znaków?"
+                    android:textColor="#24374C"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/ile"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tlo_pola"
+                    android:inputType="number"
+                    android:paddingHorizontal="10dp"
+                    android:singleLine="true"
+                    android:textColor="#202020"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/litery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="#4682B4"
+                android:checked="true"
+                android:text="Małe i wielkie litery"
+                android:textColor="#24374C"
+                android:textSize="15sp" />
+
+            <CheckBox
+                android:id="@+id/cyfry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="#4682B4"
+                android:text="Cyfry"
+                android:textColor="#24374C"
+                android:textSize="15sp" />
+
+            <CheckBox
+                android:id="@+id/specjalne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="#4682B4"
+                android:text="Znaki specjalne"
+                android:textColor="#24374C"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/generuj"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/tlo_przycisku"
+                android:paddingHorizontal="22dp"
+                android:text="Generuj hasło"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/zatwierdz"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/tlo_przycisku"
+            android:text="Zatwierdź"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</ScrollView>
